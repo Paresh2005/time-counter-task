@@ -1,0 +1,128 @@
+.pageHeading{
+    background-color: #182848;
+    display: grid;
+    color: white;
+    height: 40px;
+    grid-template-columns: 100px auto 20px 90px 25px 120px;
+    padding-top: 8px;
+    margin-bottom: 0px;
+}
+.empty{
+    display: none;
+}
+.fa-person{
+    padding-top:4px;
+    padding-left: 85px;
+}
+.fa-right-to-bracket{
+    padding-top: 4px;
+    padding-right: 4px;
+}
+.fa-users-line{
+    padding-top: 4px;
+}
+.pageHeading i{
+    color: rgb(217, 180, 17);
+}
+.pageHeading p{
+    padding-left: 4px;
+}
+.register1 {
+    color: white;
+    text-decoration: none; 
+}
+.login1 {
+    color: white;
+    text-decoration: none; 
+}
+.register1:hover {
+    text-decoration: underline;
+}
+.login1:hover{
+    text-decoration: underline;
+}
+
+.loginCss2{
+    --bs-gutter-x: 0;
+}
+.row{
+    --bs-gutter-x: 0;
+}
+@media screen and (min-width:200px) and (max-width: 500px) {
+    .empty{
+        display: block;
+    }
+    .pageHeading{
+        background-color: #182848;
+        display: grid;
+        color: white;
+        height: 40px;
+        grid-template-columns: auto 30px 55px 30px 110px;
+        padding-top: 8px;
+        margin-bottom: 0px;
+    }
+    .pageHeading a{
+        width: 100px;
+    }
+    .fa-person {
+      display: none;
+    }
+    .connect1{
+      display: none;  
+    }
+    .login1{
+       
+    }
+    .register1 p{ 
+        padding-left: 0px;
+    }
+    .register1{ 
+        
+    }
+    .fa-right-to-bracket{
+        padding-top: 4px;
+        padding-left: 8px;
+    }
+    .fa-users-line{
+        padding-top: 4px;
+        padding-left: 4px;
+    } 
+  }
+  @media screen and (min-width:502px) and (max-width: 700px) {
+    .empty{
+        display: none;
+    }
+    .pageHeading{
+        background-color: #182848;
+        display: grid;
+        color: white;
+        height: 40px;
+        grid-template-columns: 20px auto 30px 55px 30px 100px;
+        padding-top: 8px;
+        margin-bottom: 0px;
+    }
+    .pageHeading a{
+        width: 100px;
+    }
+    .fa-person {
+        padding-top:4px;
+        padding-left: 0px;
+    }
+    .connect1{
+        
+    }
+    .login1{
+       
+    }
+    .register1 p{ 
+      
+    }
+    .fa-right-to-bracket{
+        padding-top: 4px;
+        padding-left: 8px;
+    }
+    .fa-users-line{
+        padding-top: 4px;
+        padding-left: 4px;
+    } 
+  }

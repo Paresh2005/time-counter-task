@@ -1,0 +1,74 @@
+.navNgo{
+    background: linear-gradient(90deg, #4b6cb7 0%, #182848 100%);
+}
+.navFont{
+    color: white;
+    margin-left: 10px;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.navFont:hover{
+    color: white;
+}
+
+.profile-section {
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  .profile-card {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .profile-pic {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    object-fit: cover;
+  }
+  
+  .profile-role {
+    font-size: 16px;
+    color: #777;
+  }
+  
+  .menu {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+  }
+  
+  .menu-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .menu-list li {
+    margin-bottom: 15px;
+
+  }
+  
+  .menu-list li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+  }
+  .menu-list li a i {
+    margin-right: 10px; /* Add padding between icon and text */
+  }
+  
+  .menu-list li a:hover {
+    text-decoration: underline;
+  }
+  
+  .user-table {
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+  }

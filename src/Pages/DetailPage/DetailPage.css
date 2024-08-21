@@ -1,0 +1,99 @@
+.ngoDetail{
+    padding: 15px 15px 0px 15px;
+    border-bottom: 1px solid black;
+    height: 70px;
+    margin-top: 10px;
+}
+.printIcon{
+    text-align: end;
+}
+.closeIcon{
+    /* text-align: end; */ 
+}
+.buttonCloseIcon{
+    padding-left: 100%;
+}
+.pageHeadingDP{
+    height: 70px;
+    border-bottom: 1px solid black;
+    display: grid;
+    grid-template-columns: 900px 150px 50px;
+    padding: 15px 15px 25px 15px;
+    margin-top: 10px;
+}
+.pageHeadingDP i{
+    margin-top:8px ;
+}
+.pageHeadingDP button{
+    margin-top:5px ;
+}
+.namePanel{
+    background-color: rgb(97, 180, 232);
+    text-align: center;
+    margin: 10px 8px 10px 8px !important;
+    padding: 4px;
+    border-bottom:1px solid black ;
+    color: white;
+}
+.idbox{
+    border: 1px solid black;
+}
+.namePane2{
+    background-color: rgb(97, 180, 232);
+    text-align: left;
+    margin: 10px 8px 10px 8px !important;
+    padding: 4px;
+    border-bottom:1px solid black ;
+    color: white;
+}
+.buttonDonate{
+    text-align: right;
+}
+.buttonContact{
+    text-align: left;
+}
+.buttonDP{
+    padding-bottom: 20px;
+}
+
+@media screen and (max-width: 400px){
+    .membersAadhar{
+        display: none;
+    }
+    .membersPan{
+        display: none;
+    }
+    .purpose{
+        display: none;
+    } 
+    .emailWidth{
+        font-size: small;
+    } 
+    .buttonCloseIcon{
+        padding-left: 0%;
+    }
+    .printIcon{
+        text-align: start;
+    }
+}
+@media print {
+    body * {
+      visibility: hidden;
+    }
+
+    .container .buttonDP *{
+       visibility: hidden;
+    }
+  
+    .container, .container * {
+      visibility: visible;
+    }
+  
+    .container {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+    }
+  }
+  

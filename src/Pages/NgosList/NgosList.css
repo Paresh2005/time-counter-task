@@ -1,0 +1,125 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+/* .pageHeading{
+    background-color: #182848;
+    display: grid;
+    color: white;
+    height: 40px;
+    grid-template-columns: 100px auto 20px 90px 20px 120px;
+    padding-top: 8px;
+}
+.fa-person{
+    padding-top:4px;
+    padding-left: 85px;
+}
+.fa-right-to-bracket{
+    padding-top: 4px;
+    padding-right: 4px;
+}
+.fa-users-line{
+    padding-top: 4px;
+}
+.pageHeading i{
+    color: rgb(217, 180, 17);
+}
+.pageHeading p{
+    padding-left: 4px;
+}
+.nav-link{
+    color: white !important;
+} */
+.navbar{
+    /* position:fixed !important;
+    top: 0px;
+    width: 100%; */
+}
+/* .footer-1{
+    background: linear-gradient(90deg, #4b6cb7 0%, #182848 100%);
+    height: 50px;
+    border: 2px solid black;
+    text-align: center;
+    padding-top: 10px;
+} */
+.footer-1 a{
+    margin-left: 5px;
+    color: white;
+    text-decoration: none;
+}
+.footer-2{
+    background-color: black;
+    color: white;
+    height: 100px;
+}
+.footer-content img{
+    /* display: flex; */
+    height: 25px;
+    width: 110px;
+    margin-right: 10px;
+}
+.footer-content{
+     display: flex;
+     justify-content: center;
+    align-items: center;
+}
+.footer-content p{
+    padding-top: 10px;
+    padding-left: 15px;
+    border-left: 1px solid white;
+}
+main{
+    background: linear-gradient(90deg, #e3ffe7 0%, #d9e7ff 100%);
+}
+.tableCss{
+    padding: 20px;
+}
+.buttonVD{
+    --bs-btn-padding-y: .42rem !important; 
+    --bs-btn-padding-x: .7rem !important;
+    --bs-btn-font-size: .98rem !important;
+}
+.buttonVD2{
+    width: 105px;
+}
+.colCSS2{
+    padding: 0px ip !important;
+}
+.searchBar{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 15px;
+    border:2px solid #2b2c2f34 ;
+    width: 95%;
+}
+.selectDis{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-right: 10px;
+    border:2px solid #2b2c2f34 ;
+    width: 92%;
+}
+.nameNgo{
+    width: 39% ;
+}
+
+
+@media screen and (max-width:760px) {
+    .searchBar{
+        margin-top: 20px;
+        margin-bottom: 10px;
+        margin-left: 10px;
+        margin-right: 1px;
+        border:2px solid #2b2c2f34 ;
+        width: 92%  !important;
+    }
+    .selectDis{
+        margin-top: 10px;
+        margin-bottom: 20px;
+        margin-left: 10px;
+        margin-right: 10px;
+        border:2px solid #2b2c2f34 ;
+        width: 92%;
+    }
+}

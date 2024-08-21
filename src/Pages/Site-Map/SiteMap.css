@@ -1,0 +1,61 @@
+.site-map-container {
+  padding: 20px;
+  font-family: 'Arial, sans-serif';
+  max-width: 800px;
+  margin: 0 auto;
+  color: #333;
+  background-color: #f8f9fa;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.site-map-header {
+  text-align: center;
+  margin-bottom: 30px;
+  color: black;
+  font-size: 2em;
+}
+
+.site-map-section {
+  margin-bottom: 30px;
+}
+
+.site-map-section-title {
+  margin-top: 0;
+  color: black;
+  font-size: 1.5em;
+  border-bottom: 2px solid #0073e6;
+  padding-bottom: 5px;
+}
+
+.site-map-list {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.site-map-list-item {
+  margin: 10px 0;
+  font-size: 1.1em;
+  transition: transform 0.2s;
+}
+
+.site-map-list-item:hover {
+  transform: translateX(10px);
+}
+
+.site-map-link {
+  text-decoration: none;
+  color: black;
+  display: flex;
+  align-items: center;
+}
+
+.site-map-link:hover {
+  text-decoration: underline;
+}
+
+.site-map-icon {
+  margin-right: 8px;
+  color: #0073e6;
+  font-size: 1.2em;
+}

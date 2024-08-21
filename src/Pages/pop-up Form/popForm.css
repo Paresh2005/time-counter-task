@@ -1,0 +1,114 @@
+.error {
+  color: red;
+  font-size: 0.875em;
+  margin-top: 0.25rem;
+  display: block;
+}
+.requiredPopup {
+  color: red;
+  margin-left: 4px;
+}
+
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    z-index: 1000; /* Adjust the z-index to be above other content */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 200px;
+  }
+  
+  .popup-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    z-index: 1001;
+    max-height: 96vh; /* Ensures the popup doesn't exceed the viewport height */
+    overflow-y: auto; /* Ensure content is above the overlay */
+  }
+  .submitPop{
+    text-align: right;
+  }
+  .closePop{
+    text-align: left;
+  }
+  .radioSelect{
+    font-size:large ;
+    text-transform: uppercase;
+  }
+  .submitPop button,
+.closePop button {
+  width: 100%;
+}
+.inputsizePop{
+  width: 98%;
+}
+.popbox{
+  padding-left:20px;;
+}
+.mobilepop{
+  padding-right: 10px;
+}
+.optpop{
+  width: 90%;
+}
+.optboxpop{
+  padding-left: 10px;
+}
+
+  
+  @media screen and (max-width:500px){
+    .popup-overlay{
+        padding: 0;
+        position: relative;
+        margin-bottom: 20px;
+    }
+    .popup-content{
+      max-height: none; /* Ensures the popup doesn't exceed the viewport height */
+      overflow-y: none;
+    }
+
+    .form-group {
+        margin-bottom: 10px; /* Reduce margin between form groups */
+    }
+    
+    .form-control {
+        width: 100%; /* Set input width to 100% */
+    }
+
+    /* form field  */
+
+    .popbox{
+      padding-left: 0px;
+    }
+    .radioSelect{
+      font-size: medium;
+    }
+    .inputsizePop{
+      width: 100% !important;
+     margin-bottom: 10px;
+    }
+    .mobilepop{
+      padding-right: 0px;
+    }
+
+    .blockformobile{
+      display: none;
+    }
+    .mobileviewpb{
+      margin-bottom: 10px;
+    }
+    .optpop{
+      width: 100%;
+    }
+    .optboxpop{
+      padding-left: 0px;
+    }
+  }
+  

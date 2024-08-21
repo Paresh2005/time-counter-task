@@ -1,0 +1,10 @@
+.container-fluid{
+    padding-left: 0px;
+    padding-right: 0px;
+}
+.containerCss2{
+    --bs-gutter-x: 0;
+}
+.container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl{
+    --bs-gutter-x: 0 !important;
+}

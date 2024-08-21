@@ -1,0 +1,243 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+/* .pageHeading{
+    background-color: #182848;
+    display: grid;
+    color: white;
+    height: 40px;
+    grid-template-columns: 100px auto 20px 90px 20px 120px;
+    padding-top: 8px;
+}
+.fa-person{
+    padding-top:4px;
+    padding-left: 85px;
+}
+.fa-right-to-bracket{
+    padding-top: 4px;
+    padding-right: 4px;
+}
+.fa-users-line{
+    padding-top: 4px;
+}
+.pageHeading i{
+    color: rgb(217, 180, 17);
+}
+.pageHeading p{
+    padding-left: 4px;
+}
+.nav-link{
+    color: white !important;
+} */
+.navbar{
+    /* position:fixed !important;
+    top: 0px;
+    width: 100%; */
+}
+/* .footer-1{
+    background: linear-gradient(90deg, #4b6cb7 0%, #182848 100%);
+    height: 50px;
+    border: 2px solid black;
+    text-align: center;
+    padding-top: 10px;
+} */
+.footer-1 a{
+    margin-left: 5px;
+    color: white;
+    text-decoration: none;
+}
+.footer-2{
+    background-color: black;
+    color: white;
+    height: 100px;
+}
+.footer-content img{
+    /* display: flex; */
+    height: 25px;
+    width: 110px;
+    margin-right: 10px;
+}
+.footer-content{
+     display: flex;
+     justify-content: center;
+    align-items: center;
+}
+.footer-content p{
+    padding-top: 10px;
+    padding-left: 15px;
+    border-left: 1px solid white;
+}
+main{
+    background: linear-gradient(90deg, #e3ffe7 0%, #d9e7ff 100%);
+}
+.tableCss{
+    padding: 20px;
+}
+.buttonVD{
+    --bs-btn-padding-y: .42rem !important; 
+    --bs-btn-padding-x: .7rem !important;
+    --bs-btn-font-size: .98rem !important;
+}
+.buttonVD2{
+    width: 105px;
+}
+.colCSS2{
+    padding: 0px ip !important;
+}
+.searchBar{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 15px;
+    border:2px solid #2b2c2f34 ;
+    width: 95%;
+}
+.selectDis{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-right: 10px;
+    border:2px solid #2b2c2f34 ;
+    width: 92%;
+}
+.nameNgo{
+    width: 39% ;
+}
+.headTilte{
+    
+    background-color: #182848;
+    color: white;
+    border:white;
+    font-size: 20px
+        
+}
+.tableHeadBackground {
+    background-color: #182848;
+    color: white;
+    border:2px solid black ;/* Change this to the desired background color */
+    --bs-table-bg:none;
+    --bs-table-color:none;
+    vertical-align:middle !important
+  }
+  .pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .pagination a {
+    margin: 0 5px;
+    padding: 10px 15px;
+    border: 1px solid #182848;
+    color: #182848;
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .pagination a:hover {
+    background-color: #182848;
+    color: white;
+  }
+  
+  .pagination .active {
+    background-color: #182848;
+    color: white;
+  }
+  .loader-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px; /* Adjust height as needed */
+  }
+  
+  .loader-container .react-loader-spinner {
+    width: 50px; /* Size of the loader */
+    height: 50px; /* Size of the loader */
+  }
+  
+  .table-responsive {
+    margin-top: 20px;
+  }
+    
+  .pagination {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+  }
+  
+  .pagination li {
+    display: inline;
+    margin: 0 5px;
+  }
+  
+  .pagination li a {
+    text-decoration: none;
+    color: #007bff;
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .pagination li a:hover {
+    background-color: #eee;
+  }
+  
+  .pagination .active a {
+    background-color: #007bff;
+    color: white;
+    border: 1px solid #007bff;
+  }
+  
+  
+  @media (max-width: 767px) {
+    .pagination {
+      flex-wrap: wrap;
+    }
+  
+    .pagination li {
+      margin: 5px 2px;
+    }
+  
+    .pagination li a {
+      padding: 6px 8px;
+      font-size: 14px;
+    }
+  }
+  
+  .loader-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full height of the viewport */
+  }
+  
+  .searchBar {
+    margin-bottom: 20px;
+  }
+  
+  .selectDis {
+    margin-bottom: 20px;
+  }
+  
+
+@media screen and (max-width:760px) {
+    .searchBar{
+        margin-top: 20px;
+        margin-bottom: 10px;
+        margin-left: 10px;
+        margin-right: 1px;
+        border:2px solid #2b2c2f34 ;
+        width: 92%  !important;
+    }
+    .selectDis{
+        margin-top: 10px;
+        margin-bottom: 20px;
+        margin-left: 10px;
+        margin-right: 10px;
+        border:2px solid #2b2c2f34 ;
+        width: 92%;
+    }
+    
+}

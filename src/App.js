@@ -1,80 +1,70 @@
-import React  , {createContext, useEffect, useState , useRef} from 'react'
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import { BrowserRouter,Route,Routes } from "react-router-dom";
+import { useState } from "react";
 
-//Layout
-import Layout from './componets/Layout'
 
-//componets
-import Home from './componets/Home'
-import About from './componets/About'
 
-//timer context
-const TimerContext = createContext();
+import LoginPanel from "./Pages/Header/LoginPanel"
+import Navbar from "./Pages/Header/Navbar";
+import HomeLayout from "./Layout/HomeLayout";
+import AdminLayout from "./Layout/AdminLayout";
+import Home from "./Pages/Home/Home";
+import NgosList from "./Pages/NgosList/NgosList";
+import Food from "./Pages/Food/Food";
+import DetailPage from "./Pages/DetailPage/DetailPage";
+import RForm from "./Pages/Ngo Form/RForm";
+import About from "./Pages/About/About";
+import Contact from "./Pages/Contact/Contact";
+import Feedback from "./Pages/Feedback/Feedback";
+import PopupButton from "./Pages/pop-up Form/popForm";
+import LoginNgo from "./Pages/Login Ngo/LoginNgo";
+import HomeNgo from "./Pages/NGOportal/HomePage/HomeNgo";
+import PolicyPage from "./Pages/Website Policy/WebsitePolicy";
+import HelpPage from "./Pages/Help/Help";
+import SiteMap from "./Pages/Site-Map/SiteMap";
+import Category from "./Pages/Category/Category";
+import EditNgo from "./Pages/NGOportal/EditNgo/EditNgo";
+import ChangePassword from "./Pages/NGOportal/ChangePassword/ChangePassword";
 
-function App() {
-    const [timer, setTimer] = useState({ h: 0, m: 0, s: 0 });
-    const countdown = useRef(null);
+import ProtectedRoute from "./ProtectedRoute/protectedRoute";
 
-    useEffect(() => {
-        const savedTimer = JSON.parse(localStorage.getItem('timer'));
-        if (savedTimer != null && (savedTimer.h !== 0 || savedTimer.m !== 0 || savedTimer.s !== 0)) {
-            setTimer(savedTimer);
-            startTimer();
-        }
-
-        // Cleanup function to clear the interval
-        return () => {
-            clearInterval(countdown.current);
-        };
-    }, []);
-
-    // Save timer to localStorage whenever it changes
-    useEffect(() => {
-        localStorage.setItem('timer', JSON.stringify(timer));
-    }, [timer]);
-
-    // Start timer
-    function startTimer() {
-        countdown.current = setInterval(() => {
-            setTimer((prevTimer) => {
-                let { h, m, s } = prevTimer;
-
-                let totalSeconds = h * 3600 + m * 60 + s;
-                totalSeconds--;
-
-                if (totalSeconds < 0) {
-                    clearInterval(countdown.current); // Clear interval if time is up
-                    return { h: 0, m: 0, s: 0 }; // Reset timer when it reaches zero
-                }
-
-                h = Math.floor(totalSeconds / 3600);
-                m = Math.floor((totalSeconds / 60) % 60);
-                s = totalSeconds % 60;
-
-                return { h, m, s };
-            });
-        }, 1000);
-    }
-
-    // Clear timer
-    function clearTimer() {
-        clearInterval(countdown.current); // Clear the interval
-        setTimer({ h: 0, m: 0, s: 0 }); // Reset timer state
-        localStorage.clear(); // Clear local storage
-    }
-
+function App(){
+    const [selectedCategory, setSelectedCategory] = useState(null);
+    const handleCategoryClick = (category) => {
+        setSelectedCategory(category);
+    };
+   
     return (
-        <TimerContext.Provider value={{ timer, setTimer, startTimer, clearTimer }}>
-            <BrowserRouter>
-                <Routes>
-                    <Route path='/' element={<Layout />}>
-                        <Route path='' element={<Home />} />
-                        <Route path='about' element={<About />} />
-                    </Route>
-                </Routes>
-            </BrowserRouter>
-        </TimerContext.Provider>
-    );
-}
+    <>
+        <BrowserRouter>
+            <Routes>
+                <Route path="/" element={<HomeLayout/>}>
+                    <Route index element={<Home handleCategoryClick={handleCategoryClick}/>}></Route>
+                    <Route path="/:category" element={<NgosList/>}></Route>
+                    {/* <Route path="/:category" element={<Category/>}></Route> */}
+                    <Route path="/:category/city/:city" element={<Category/>}></Route>
+                    <Route path="/:category/detailpage/:id" element={<DetailPage/>}></Route>
+                    <Route path="/:category/city/:city/detailpage/:id" element={<DetailPage/>}></Route>
 
-export { App, TimerContext };
+                    
+                    <Route path="/rform" element={<RForm/>}></Route>
+                    <Route path="/loginNgo" element={<LoginNgo/>}></Route>
+                    <Route path="/about" element={<About/>}></Route>
+                    <Route path="/contact" element={<Contact/>}></Route>
+                    <Route path="/feedback" element={<Feedback/>}></Route>
+                    <Route path="/websitePolicy" element={<PolicyPage/>}></Route>
+                    <Route path="/help" element={<HelpPage/>}></Route>
+                    <Route path="/sitemap" element={<SiteMap/>}></Route>
+                    <Route path="/pop" element={<PopupButton/>}></Route>
+                    
+                </Route>
+                <Route path="/ngopage" element={<ProtectedRoute><AdminLayout/></ProtectedRoute>}>
+                    <Route index element={<HomeNgo/>}></Route>
+                    <Route path="editNgo" element={<EditNgo/>}></Route>
+                    <Route path="changePassword" element={<ChangePassword/>}></Route>
+                </Route>
+            </Routes>
+        </BrowserRouter>        
+    </>
+    )
+}
+export default App;

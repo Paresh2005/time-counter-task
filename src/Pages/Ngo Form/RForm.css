@@ -1,0 +1,29 @@
+.heading-inter{
+    text-align: center;
+}
+.headingnew{
+    /* background-color: rgba(117, 173, 208, 0.34); */
+    background: linear-gradient(90deg, #e3ffe7 0%, #d9e7ff 100%);
+    font-size: 40px;
+    padding: 10px;
+    text-decoration: underline;
+    text-align: center;
+}
+.rform{
+   padding: 10px; 
+}
+.buttonsumit{
+    margin-bottom: 20px; 
+}
+.buttonclass{
+    text-align: center;
+}
+.nameDiv{
+    padding-right: 10px;
+}
+.contactDiv{
+    padding-left: 10px;
+}
+.widthField{
+    width: 100% !important;
+}

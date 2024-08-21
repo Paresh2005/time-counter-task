@@ -1,0 +1,28 @@
+.footer-1{
+    background: linear-gradient(90deg, #4b6cb7 0%, #182848 100%);
+    height: 50px;
+    /* border: 2px solid black; */
+    text-align: center;
+   
+    padding-top: 10px;
+    --bs-gutter-x: 0;
+}
+.footer-1 a{
+    margin-left: 5px;
+    color: white;
+    text-decoration: none;
+    padding: 0px 10px;
+    
+}
+.line{
+    border-right: 2px solid rgba(255, 255, 255, 0.493);
+}
+.footer-1 a:hover{
+    text-decoration: underline;
+}
+@media screen and (max-width:500px) {
+    .footer-1{
+        height: 80px;
+        padding: 10px;
+    }
+}

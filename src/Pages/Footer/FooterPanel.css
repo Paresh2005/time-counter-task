@@ -1,0 +1,22 @@
+.footer-2{
+    background-color: black;
+    color: white;
+    height: 100px;
+    --bs-gutter-x: 0;
+}
+.footer-content img{
+    /* display: flex; */
+    height: 25px;
+    width: 110px;
+    margin-right: 10px;
+}
+.footer-content{
+     display: flex;
+     justify-content: center;
+    align-items: center;
+}
+.footer-content p{
+    padding-top: 10px;
+    padding-left: 15px;
+    border-left: 1px solid white;
+}
