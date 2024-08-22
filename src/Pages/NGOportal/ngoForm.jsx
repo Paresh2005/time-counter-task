@@ -248,17 +248,15 @@ const NGOForm = ({ ngoData, onSubmit,loading }) => {
     <div className="container shadow rounded mt-4 pt-2 mb-4 pb-3">
       <h4 className='text-center my-4'>{ngoData ? 'Edit NGO Details' : 'Register New NGO'}</h4>
       <Box >
-      {/* <Grid container spacing={2} style={{ flexWrap: 'wrap' }}>
       <Stepper nonLinear activeStep={activeStep} style={{ width: '100%' }}>
         {steps.map((label, index) => (
          <Step completed={completed[index]}>
-         <StepButton color="inherit" onClick={handleStep(index)}>
+          <StepButton color="inherit" onClick={handleStep(index)}>
            {label}
          </StepButton>
        </Step>
         ))}
       </Stepper>
-      </Grid> */}
 
 {/* <Grid container spacing={2} style={{ flexWrap: 'wrap' }}>
       <Stepper nonLinear activeStep={activeStep} >

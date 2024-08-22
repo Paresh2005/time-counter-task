@@ -181,9 +181,9 @@ function HomeNgo() {
                   </a>
                 </li>
                 <li>
-                  <a href="#">
-                    <i className="fas fa-cog"></i> Settings
-                  </a>
+                  <Link to={"/ngopage/ngoPhotos"}>
+                     <i className="fas fa-image"></i> Photos
+                  </Link>
                 </li>
                 <li>
                   <Link to={"/ngopage/changePassword"}>

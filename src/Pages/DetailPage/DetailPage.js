@@ -4,6 +4,8 @@ import { useState } from "react";
 import { useEffect } from "react";
 import "./DetailPage.css";
 import PopupButton from "../pop-up Form/popForm";
+import Slider from "react-slick";
+
 
 import {SERVER_BASE_URL} from "../../Util/Base_Url"
 
@@ -23,7 +25,8 @@ function DetailPage() {
   const [ngoObject, setNgoObject] = useState({});
 
   useEffect(() => {
-    fetch(`${SERVER_BASE_URL}/api/ngo/getNgoById/` + id)
+     try{
+      fetch(`${SERVER_BASE_URL}/api/ngo/getNgoById/` + id)
       .then((res) => res.json())
       .then((res) =>{
           if(res.success){
@@ -32,6 +35,9 @@ function DetailPage() {
             toast.error(res.msg);
           }
   });
+     }catch(error){
+      toast.error(error.message);
+     }
   }, []);
 
   const handlePrint = () => {
@@ -46,6 +52,35 @@ function DetailPage() {
   var email=ngoObject["Contact Details"]?.["E-mail"] || "N/A";
   email = email.replace("(at)","@");
   email = email.replace("[dot]",".");
+
+  // img scoller settings
+  var settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 1024, // At 1024px and below
+        settings: {
+          slidesToShow: 2,  // Show 2 slides
+          slidesToScroll: 1,
+          infinite: true,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 768, // At 768px and below
+        settings: {
+          slidesToShow: 1,  // Show 1 slide
+          slidesToScroll: 1,
+          infinite: true,
+          dots: true
+        }
+      }
+    ]
+  };
 
   return (
     <>
@@ -268,6 +303,20 @@ function DetailPage() {
             </tr>
           </tbody>
         </table>
+
+        <Slider {...settings} className="mb-5">
+      {ngoObject.photos && ngoObject.photos.map((img, index) => (
+        <div key={index}> {/* Bootstrap grid column */}
+          <img
+            className="img-fluid rounded" // Bootstrap classes for responsive and rounded images
+            src={img}
+            style={{ height: '30vh', objectFit: 'cover' }}
+            alt={`Slide ${index + 1}`}
+          />
+        </div>
+      ))}
+    </Slider>
+
         <div class="row buttonDP">
           <div class="col-6 buttonDonate pe-2 ">
             <a href="" class="btn btn-success">

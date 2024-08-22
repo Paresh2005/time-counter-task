@@ -1,0 +1,9 @@
+.img-hover {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.img-hover:hover {
+    transform: scale(1.05); /* Slight zoom effect */
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3); /* Add shadow */
+    filter: brightness(1.2)  saturate(1.3); 
+}

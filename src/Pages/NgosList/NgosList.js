@@ -50,17 +50,18 @@ const gujaratDistricts = [
 function Education() {
   const navigate = useNavigate();
 
-  const { category, city } = useParams();
+  const { category} = useParams();
   const [ngoList, setNgoList] = useState([]);
   const [flag, setFlag] = useState(false);
   const [filterNgoList, setfilterNgoList] = useState([]);
   const [loading, setLoading] = useState(true);
   const [search, setSearch] = useState("");
-  const [citySelected, setcitySelected] = useState([]);
+  const [city , setCity] = useState("");
   const [ngoLength , setNgoLength] = useState(0);
   const [currPageNumber , setCurrPageNumber] = useState(0);
 
   useEffect(() => {
+    setCurrPageNumber(0);
     fetchOnePageData(0);
   }, [category, city,search]);
 
@@ -123,7 +124,7 @@ function Education() {
   const columns = [
     {
       name: "No",
-      selector: (_, index) => index + 1,
+      selector: (_, index) => (index + 1) + (currPageNumber * 10),
       sortable: true,
       width: "8%",
       style: {
@@ -248,7 +249,7 @@ function Education() {
               className="form-select selectDis"
               aria-label="Default select example"
               onChange={(e) => {
-                return handleCitySelect(e.target.value);
+                return setCity(e.target.value == "Select District"? "":e.target.value);
               }}
             >
               <option selected>

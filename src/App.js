@@ -24,6 +24,7 @@ import SiteMap from "./Pages/Site-Map/SiteMap";
 import Category from "./Pages/Category/Category";
 import EditNgo from "./Pages/NGOportal/EditNgo/EditNgo";
 import ChangePassword from "./Pages/NGOportal/ChangePassword/ChangePassword";
+import NgoPhotos from "./Pages/NGOportal/NgoPhotos/NgoPhotos";
 
 import ProtectedRoute from "./ProtectedRoute/protectedRoute";
 
@@ -60,6 +61,7 @@ function App(){
                 <Route path="/ngopage" element={<ProtectedRoute><AdminLayout/></ProtectedRoute>}>
                     <Route index element={<HomeNgo/>}></Route>
                     <Route path="editNgo" element={<EditNgo/>}></Route>
+                    <Route path="ngoPhotos" element={<NgoPhotos/>}></Route>
                     <Route path="changePassword" element={<ChangePassword/>}></Route>
                 </Route>
             </Routes>
